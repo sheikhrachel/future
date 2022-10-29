@@ -32,7 +32,7 @@ func (h *Handler) GetBookings(c *gin.Context) {
 		if bookings != nil {
 			bookings = fixOutputBookingDates(bookings)
 		}
-		return StatusOK, gin.H{"trainer_id": trainerId, "booked": bookings}
+		return StatusOK, gin.H{"trainer_id": trainerId, "bookings": bookings}
 	})
 }
 

@@ -10,9 +10,19 @@ Date: 28.10.2022
 
 This project is a web server build with `go 1.19`, serving traffic with [gin](https://github.com/gin-gonic/gin)
 
+### Using the live server
+
+_Don't feel like cloning the repo? Use the deployed server to try out requests!  Endpoints below_
+
+```zsh
+https://rsheikh-future.herokuapp.com/appointments/bookings/1
+```
+
+should return trainer 1's booked appointments!
+
 ### Using the bundled server executable
 
-Don't feel like installing Go / dealing with dependencies?  Use the bundled in build!
+_Don't feel like installing Go / dealing with dependencies?  Use the bundled in build!_
 
 From the root:
 ```zsh
@@ -26,7 +36,7 @@ _missing go 1.19?  Head on over to [go downloads](https://go.dev/dl/) and follow
 ```zsh
 go version
 ```
-should output
+should output something like
 
 `go version go1.19.1 darwin/arm64`
 
@@ -188,28 +198,16 @@ Response
 ```
 
 ####  Get a list of booked appointments
-GET `/appointments/booked/:trainer_id`
+GET `/appointments/bookings/:trainer_id`
 
 Returns booked appointments for a trainer
 
-Request
-```json
-{
-  "trainer_id": "int trainer id"
-}
-```
-
-ex.
-```json
-{
-  "trainer_id": 1
-}
-```
+No request body, param passed in with the path
 
 Response
 ```json
 {
-  "booked": [
+  "bookings": [
     {
       "id":0,
       "trainer_id":1,
