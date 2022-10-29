@@ -12,7 +12,7 @@ This project is a web server build with `go 1.19`, serving traffic with [gin](ht
 
 ### Using the bundled server executable
 
-Don't feel like installing Go / dealing with dependencies?  Use the bundled in build!
+Don't feel like installing Go / dealing with dependencies?  Use the bundled server build!
 
 From the root:
 ```zsh
@@ -243,7 +243,7 @@ Response
 
 ## Next Steps (shortlist)
 
-- Update `/appointments/availability/:trainer_id` and `/appointments/booked/:trainer_id` to be paginated
+- Update `/appointments/availability` and `/appointments/booked/:trainer_id` to be paginated
 - Integrate Redis as a write-through cache to better handle concurrent appointment reads/writes
 - Integrate Cloudwatch to fetch production metrics and dashboard endpoint health/latency/rps
 - Setup CodePipeline and deploy to EC2 instance
