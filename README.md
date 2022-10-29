@@ -10,7 +10,7 @@ Date: 28.10.2022
 
 This project is a web server build with `go 1.19`, serving traffic with [gin](https://github.com/gin-gonic/gin)
 
-### Using the live server
+### Option 1: Using the live server
 
 _Don't feel like cloning the repo? Use the deployed server to try out requests!  Endpoints below_
 
@@ -20,7 +20,7 @@ https://rsheikh-future.herokuapp.com/appointments/bookings/1
 
 should return trainer 1's booked appointments!
 
-### Using the bundled server executable
+### Option 2: Using the bundled server executable
 
 _Don't feel like installing Go / dealing with dependencies?  Use the bundled in build!_
 
@@ -29,7 +29,7 @@ From the root:
 ./server
 ```
 
-### Using `go run main.go`
+### Option 3: Using `go run main.go`
 
 _missing go 1.19?  Head on over to [go downloads](https://go.dev/dl/) and follow the steps to set it up!_
 
